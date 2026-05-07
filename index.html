@@ -6,8 +6,6 @@
 <title>Numeriano Constantino Jr. | Virtual Assistant & Content Creator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -156,7 +154,6 @@
     border-radius: 50px; font-weight: 600; font-size: 15px;
     text-decoration: none; transition: all .2s;
     border: 2px solid var(--blue-600);
-    cursor: pointer;
   }
   .btn-primary:hover { background: var(--blue-700); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(24,95,165,.25); }
   .btn-secondary {
@@ -165,7 +162,6 @@
     border-radius: 50px; font-weight: 600; font-size: 15px;
     text-decoration: none; transition: all .2s;
     border: 2px solid var(--blue-200);
-    cursor: pointer;
   }
   .btn-secondary:hover { border-color: var(--blue-400); background: var(--blue-50); }
   .hero-visual {
@@ -383,11 +379,6 @@
     align-self: flex-start;
   }
   .btn-submit:hover { background: var(--blue-700); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(24,95,165,.3); }
-  .form-success {
-    display: none; padding: 16px 20px;
-    background: #ecfdf5; border: 1.5px solid #a7f3d0;
-    border-radius: 12px; color: #065f46; font-size: 14px; font-weight: 500;
-  }
 
   /* ── FOOTER ── */
   footer {
@@ -410,7 +401,7 @@
     .hero-tags { justify-content: center; }
     .hero-ctas { justify-content: center; }
     .hero-visual { order: -1; }
-    .hero-avatar { width: 200px; height: 240px; font-size: 72px; }
+    .hero-avatar { width: 200px; height: 240px; }
     .hero-card { display: none; }
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -433,6 +424,7 @@
 </head>
 <body>
 
+<!-- NAVIGATION -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">Numer<span>.</span></a>
   <ul class="nav-links">
@@ -448,6 +440,7 @@
   </button>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-text fade-up">
@@ -462,9 +455,10 @@
         <span class="hero-tag">Digital Marketing</span>
       </div>
       <div class="hero-ctas">
-        <button onclick="downloadResume()" class="btn-secondary">
+        <!-- FIXED PDF LINK BELOW -->
+        <a href="/Numer_1/Numer_Portfolio/assets/resume/Numeriano-Resume.pdf.pdf" download="Numeriano-Resume.pdf" class="btn-secondary">
             Download Resume
-        </button>
+        </a>
         <a href="#contact" class="btn-primary">Work With Me</a>
         <a href="#services" class="btn-secondary">See My Services</a>
       </div>
@@ -485,6 +479,7 @@
   </div>
 </section>
 
+<!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item fade-up">
@@ -506,8 +501,7 @@
   </div>
 </div>
 
-<div id="resume-pdf-content">
-
+<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="about-grid">
@@ -519,7 +513,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <div>
               <div class="ai-label">Location</div>
-              <div class="ai-val">Looc, Nasugbu, Batangas, Philippines</div>
+              <div class="ai-val">Nasugbu, Batangas, PH</div>
             </div>
           </div>
           <div class="about-info-item">
@@ -536,27 +530,56 @@
               <div class="ai-val">numerconstantino@gmail.com</div>
             </div>
           </div>
-          <div class="about-info-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            <div>
-              <div class="ai-label">Availability</div>
-              <div class="ai-val">Full-time Remote / Freelance</div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="about-text fade-up">
         <div class="section-badge">About Me</div>
         <h2 class="section-title">Results-Driven<br/>Digital Professional</h2>
-        <p>I'm a <span class="highlight-text">Social Media Coordinator and Virtual Assistant</span> with over 2 years of hands-on experience in digital content creation, brand management, and customer service. I thrive in fast-paced environments where multitasking, communication, and problem-solving matter.</p>
-        <p>My background spans social media management, hotel reservations for international clients (Canada & USA), restaurant operations, and academic project management — giving me a well-rounded perspective on how businesses work and what clients truly need.</p>
-        <p>Currently pursuing a <span class="highlight-text">Bachelor of Science in Information Systems</span> at Laverdad Christian College — where I'm a Dean's Lister and full scholar — I bring both technical literacy and business awareness to every project I take on.</p>
+        <p>I'm a <span class="highlight-text">Social Media Coordinator and Virtual Assistant</span> with over 2 years of hands-on experience in digital content creation, brand management, and customer service.</p>
+        <p>Currently pursuing a <span class="highlight-text">BS in Information Systems</span> — where I'm a Dean's Lister and scholar — I bring both technical literacy and business awareness to every project.</p>
         <a href="#contact" class="btn-primary" style="display:inline-block; margin-top:24px;">Let's Connect</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <div>
+        <div class="section-badge">What I Offer</div>
+        <h2 class="section-title">Services Tailored<br/>to Your Business</h2>
+      </div>
+      <p class="section-desc">Reliable, professional virtual support so you can focus on what matters most.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="service-title">Admin & VA</div>
+        <p class="service-desc">Inbox management, scheduling, and data entry handled with precision.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4"/></svg>
+        </div>
+        <div class="service-title">Social Media</div>
+        <p class="service-desc">Creating, scheduling, and managing engaging brand content.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <div class="service-title">Video Editing</div>
+        <p class="service-desc">Polished content for reels and promotional campaigns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
     <div class="section-badge">Work History</div>
@@ -566,170 +589,111 @@
         <div class="exp-header">
           <div>
             <div class="exp-role">Social Media Coordinator</div>
-            <div class="exp-company">BES House of Chicken — Apalit, Pampanga</div>
+            <div class="exp-company">BES House of Chicken — Pampanga</div>
           </div>
-          <div class="exp-date">Feb 2024 – Mar 2026</div>
+          <div class="exp-date">2024 – 2026</div>
         </div>
         <ul class="exp-list">
-          <li>Created and managed digital content for marketing campaigns</li>
-          <li>Maintained and improved brand presence across social platforms</li>
-          <li>Supported daily operations: cashier, order taking, dining support</li>
-          <li>Assisted in store events, promotions, and team-building activities</li>
-          <li>Ensured smooth workflow during peak-hour operations</li>
+          <li>Managed digital marketing and brand presence</li>
+          <li>Supported daily operations and peak workflows</li>
         </ul>
       </div>
       <div class="exp-card fade-up">
         <div class="exp-header">
           <div>
             <div class="exp-role">Hotel Agent Representative</div>
-            <div class="exp-company">BM Outsourcing — International Accounts</div>
+            <div class="exp-company">BM Outsourcing — International</div>
           </div>
-          <div class="exp-date">Dec 2023 – Dec 2024</div>
+          <div class="exp-date">2023 – 2024</div>
         </div>
         <ul class="exp-list">
-          <li>Assisted international clients (Canada & USA) with hotel reservations</li>
-          <li>Managed booking inquiries and customer support requests</li>
-          <li>Handled reservation updates and hotel system coordination</li>
-          <li>Delivered professional customer service across global clients</li>
-        </ul>
-      </div>
-      <div class="exp-card fade-up">
-        <div class="exp-header">
-          <div>
-            <div class="exp-role">Capstone Project Manager</div>
-            <div class="exp-company">Laverdad Christian College — Academic</div>
-          </div>
-          <div class="exp-date">Sep 2025 – Present</div>
-        </div>
-        <ul class="exp-list">
-          <li>Led development of two academic capstone systems</li>
-          <li>Managed team coordination, task assignments, and documentation</li>
-          <li>Ensured timely delivery and compliance with academic requirements</li>
-          <li>Strengthened leadership, planning, and system development skills</li>
+          <li>Assisted international clients with reservations</li>
+          <li>Handled global customer support inquiries</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <div class="section-badge">Expertise</div>
     <h2 class="section-title">Tools & Skills</h2>
-    <p class="section-desc">A versatile toolkit for remote work, digital content, and business operations.</p>
     <div class="skills-grid">
-      <div class="skill-chip fade-up"><span class="sk-icon">💻</span><div class="sk-name">Computer Literate</div></div>
-      <div class="skill-chip fade-up"><span class="sk-icon">🎬</span><div class="sk-name">Video Editing</div></div>
-      <div class="skill-chip fade-up"><span class="sk-icon">📱</span><div class="sk-name">Social Media Management</div></div>
-      <div class="skill-chip fade-up"><span class="sk-icon">✍️</span><div class="sk-name">Content Creation</div></div>
+      <div class="skill-chip fade-up"><span class="sk-icon">💻</span><div class="sk-name">React Native</div></div>
+      <div class="skill-chip fade-up"><span class="sk-icon">⚙️</span><div class="sk-name">TypeScript</div></div>
+      <div class="skill-chip fade-up"><span class="sk-icon">📅</span><div class="sk-name">Jira / Agile</div></div>
+      <div class="skill-chip fade-up"><span class="sk-icon">🎨</span><div class="sk-name">Canva / Editing</div></div>
     </div>
   </div>
 </section>
 
-<section id="education">
-    <div class="section-inner">
-      <div class="section-badge">Education</div>
-      <h2 class="section-title">Academic Background</h2>
-      <div class="edu-grid">
-        <div class="edu-card fade-up">
-          <div class="edu-dot">🎓</div>
-          <div>
-            <div class="edu-degree">BS in Information Systems</div>
-            <div class="edu-school">Laverdad Christian College</div>
-            <div class="edu-detail">Dean's Lister | Full Scholar</div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
-
-</div> <section id="services">
-  <div class="section-inner">
-    <div class="services-header">
-      <div>
-        <div class="section-badge">What I Offer</div>
-        <h2 class="section-title">Services Tailored<br/>to Your Business</h2>
-      </div>
-      <p class="section-desc">From managing your social media to handling customer inquiries — I deliver reliable, professional virtual support so you can focus on what matters most.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card fade-up">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        </div>
-        <div class="service-title">Admin & Virtual Assistance</div>
-        <p class="service-desc">Scheduling, inbox management, data entry, document preparation, and day-to-day administrative tasks handled remotely with precision and confidentiality.</p>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-        </div>
-        <div class="service-title">Social Media Management</div>
-        <p class="service-desc">Creating, scheduling, and managing engaging content across platforms. Building brand presence, growing audiences, and driving meaningful engagement.</p>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-        </div>
-        <div class="service-title">Video Editing & Content</div>
-        <p class="service-desc">Polished video editing for reels, promotional clips, product showcases, and marketing campaigns — optimized for maximum reach and engagement.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- CONTACT -->
 <section id="contact">
-    <div class="section-inner">
-      <div class="section-badge">Get In Touch</div>
-      <h2 class="section-title">Ready to work together?</h2>
-      <div class="contact-grid">
+  <div class="section-inner">
+    <div class="section-badge">Get In Touch</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <div class="contact-grid">
         <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">✉</div>
-            <div>
-              <div class="contact-label">Email</div>
-              <div class="contact-val">numerconstantino@gmail.com</div>
+            <div class="contact-item fade-up">
+                <div class="contact-icon">📧</div>
+                <div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-val">numerconstantino@gmail.com</div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+        <form class="contact-form fade-up">
+            <div class="form-field">
+                <label>Name</label>
+                <input type="text" placeholder="Your Name">
+            </div>
+            <div class="form-field">
+                <label>Message</label>
+                <textarea placeholder="How can I help you?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
     </div>
+  </div>
 </section>
 
 <footer>
-  <div class="footer-name">Numer<span>.</span></div>
-  <p class="footer-copy">&copy; 2026 Numeriano Constantino Jr. All Rights Reserved.</p>
+    <div class="footer-name">Numeriano Constantino Jr.</div>
+    <div class="footer-copy">&copy; 2026 Professional Portfolio. All rights reserved.</div>
 </footer>
 
 <script>
-  // PDF Download Logic
-  function downloadResume() {
-    const element = document.getElementById('resume-pdf-content');
-    const opt = {
-      margin:       [10, 10, 10, 10],
-      filename:     'Numeriano-Constantino-Resume.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2, useCORS: true },
-      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(element).save();
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    if(links.style.display === 'flex') {
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '72px';
+        links.style.left = '0';
+        links.style.width = '100%';
+        links.style.background = '#fff';
+        links.style.padding = '20px';
+    }
   }
 
-  // Fade-up Animation Logic
-  const observerOptions = { threshold: 0.1 };
+  // Fade-up Observer
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  }, observerOptions);
+  }, { threshold: 0.1 });
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  function toggleMenu() {
-    // Basic mobile menu toggle logic could go here
-  }
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
 </script>
 
 </body>
